@@ -1,0 +1,168 @@
+/* RESET */
+body {
+  margin: 0;
+  background-color: #0a0a0a;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Glow background */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+/* Keep content above glow */
+.hero * {
+  position: relative;
+  z-index: 1;
+}
+
+/* HEADING */
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+/* NAME HIGHLIGHT */
+.hero span {
+  color: white;
+}
+
+/* SUBTEXT */
+.hero p {
+  color: #a0a0a0;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* PRIMARY BUTTON */
+.primary {
+  background: white;
+  color: black;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+.primary:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.35);
+}
+
+/* SECONDARY BUTTON */
+.secondary {
+  background: transparent;
+  border: 1px solid #444;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondary:hover {
+  background: #1a1a1a;
+  border-color: #666;
+}
+
+/* GENERAL SECTIONS */
+.section {
+  min-height: 100vh;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+/* SECTION TITLE */
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+}
+
+/* PROJECT SECTION BACKGROUND */
+#projects {
+  background: #050505;
+}
+
+/* PROJECT GRID */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* PROJECT CARD */
+.project-card {
+  background: linear-gradient(145deg, #111, #0a0a0a);
+  padding: 25px;
+  border-radius: 18px;
+  text-align: left;
+  transition: all 0.35s ease;
+  border: 1px solid #1f1f1f;
+  position: relative;
+  overflow: hidden;
+}
+
+/* GLOW INSIDE CARD */
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255,255,255,0.08), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+/* HOVER EFFECT */
+.project-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: #333;
+}
+
+/* TEXT */
+.project-card h3 {
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #aaa;
+  font-size: 0.95rem;
+}

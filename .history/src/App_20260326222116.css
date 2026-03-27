@@ -1,0 +1,64 @@
+/* ================= SCROLL ANIMATION ================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= MICRO INTERACTIONS ================= */
+
+/* buttons */
+.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+}
+
+.secondary:hover {
+  border-color: #8b5cf6;
+  transform: translateY(-2px);
+}
+
+/* skill hover */
+.skill-box {
+  transition: 0.3s;
+}
+
+.skill-box:hover {
+  transform: translateY(-4px);
+  border-color: #8b5cf6;
+}
+
+/* image floating */
+.image-card img {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* project image zoom */
+.project-card img {
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+/* contact card subtle hover */
+.contact-card {
+  transition: 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15);
+}

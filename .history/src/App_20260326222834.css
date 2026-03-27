@@ -1,0 +1,272 @@
+/* ================= BASE ================= */
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #0f0f1a, #050507);
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ================= HERO ================= */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 110px 10% 50px;
+  gap: 70px;
+}
+
+.hero-left {
+  max-width: 550px;
+}
+
+.hero-title {
+  font-size: 3.2rem;
+  margin: 0;
+}
+
+.hero-role span {
+  color: #8b5cf6;
+}
+
+.description {
+  margin-top: 15px;
+  color: #a1a1aa;
+}
+
+/* ================= BUTTONS ================= */
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 12px;
+}
+
+.primary {
+  background: linear-gradient(90deg, #8b5cf6, #3b82f6);
+  padding: 12px 26px;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+.secondary {
+  border: 1px solid #2a2a35;
+  padding: 12px 24px;
+  border-radius: 30px;
+  color: #cfcfd6;
+  text-decoration: none;
+}
+
+/* ================= IMAGE ================= */
+.image-card img {
+  width: 240px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* ================= ABOUT ================= */
+.about {
+  padding: 70px 10%;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-image img {
+  max-width: 360px;
+  border-radius: 20px;
+}
+
+.about-stats {
+  display: flex;
+  gap: 60px;
+  margin: 25px 0;
+}
+
+.about-stats h3 {
+  color: #8b5cf6;
+}
+
+.about-stats span {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.about-skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 15px;
+}
+
+.skill-box {
+  border: 1px solid #1f1f2a;
+  padding: 14px;
+  border-radius: 12px;
+}
+
+/* ================= PROJECTS ================= */
+.projects {
+  padding: 70px 10%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.project-card {
+  background: rgba(15, 15, 25, 0.85);
+  border: 1px solid #1f1f2a;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.2);
+}
+
+.project-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 20px;
+}
+
+.project-content p {
+  color: #a1a1aa;
+}
+
+.project-links {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+}
+
+.project-links a {
+  border: 1px solid #2a2a35;
+  padding: 7px 16px;
+  border-radius: 20px;
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.project-links a:hover {
+  background: #8b5cf6;
+  border-color: #8b5cf6;
+}
+
+/* ================= CONTACT ================= */
+.contact {
+  padding: 90px 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-card {
+  background: #0c0c14;
+  border: 1px solid #1f1f2a;
+  border-radius: 18px;
+  padding: 40px 35px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+/* title */
+.contact-card h2 {
+  margin-bottom: 10px;
+}
+
+/* text */
+.contact-subtext {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+/* email */
+.contact-email {
+  display: block;
+  color: #8b5cf6;
+  font-weight: 500;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: 0.2s;
+}
+
+.contact-email:hover {
+  text-decoration: underline;
+}
+
+/* FIX spacing */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-links a {
+  color: #cfcfd6;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.contact-links a:hover {
+  color: #8b5cf6;
+}
+
+/* ================= TYPING EFFECT ================= */
+.typing {
+  color: #8b5cf6;
+  font-weight: 600;
+}
+
+.cursor {
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats {
+    justify-content: center;
+    gap: 30px;
+  }
+}

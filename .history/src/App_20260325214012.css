@@ -1,0 +1,236 @@
+/* BASE */
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #0f0f1a, #050507);
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+   min-height: calc(100vh - 70px);;
+  gap: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🔥 BACKGROUND GLOW */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.2), transparent 70%);
+  top: 20%;
+  right: 12%;
+  filter: blur(100px);
+  z-index: 0;
+}
+
+/* LEFT */
+.hero-left {
+  max-width: 520px;
+  z-index: 1;
+}
+
+/* SMALL INTRO TEXT */
+.intro {
+  color: #8b5cf6;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+/* MAIN NAME */
+.hero-left h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* NAME HIGHLIGHT */
+.name {
+  color: #ffffff;
+}
+
+/* ROLE */
+.gradient-text {
+  font-size: 2.6rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #8b5cf6, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 5px;
+}
+
+/* DESCRIPTION */
+.description {
+  margin-top: 20px;
+  color: #a1a1aa;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* BUTTONS */
+.buttons {
+  margin-top: 35px;
+  display: flex;
+  gap: 15px;
+}
+
+/* PRIMARY BUTTON */
+.primary {
+  background: linear-gradient(90deg, #8b5cf6, #3b82f6);
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.5);
+}
+
+/* SECONDARY */
+.secondary {
+  border: 1px solid #2a2a35;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #cfcfd6;
+  transition: all 0.3s ease;
+}
+
+.secondary:hover {
+  background: #121218;
+  border-color: #444;
+}
+
+/* RIGHT */
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/* WRAPPER (for glow layering) */
+.image-wrapper {
+  position: relative;
+}
+
+/* SOFT GLOW BEHIND IMAGE */
+.image-glow {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.35), transparent 70%);
+  filter: blur(60px);
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* IMAGE CARD */
+.image-card {
+  position: relative;
+  padding: 12px;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #0f0f14, #08080c);
+  box-shadow:
+    0 0 40px rgba(139, 92, 246, 0.2),
+    0 0 80px rgba(59, 130, 246, 0.15);
+  transition: 0.4s ease;
+  z-index: 1;
+}
+
+/* IMAGE */
+.image-card img {
+  width: 240px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center 38%;
+  border-radius: 18px;
+  display: block;
+}
+
+/* HOVER */
+.image-card:hover {
+  transform: translateY(-10px) scale(1.04);
+}
+
+/* SECTIONS */
+.section {
+  min-height: 100vh;
+  padding: 100px 10%;
+  text-align: center;
+}
+
+/* TITLES */
+.section-title {
+  font-size: 2.3rem;
+  margin-bottom: 30px;
+}
+
+/* TEXT */
+.section-text {
+  max-width: 600px;
+  margin: auto;
+  color: #a1a1aa;
+  line-height: 1.7;
+}
+
+/* PROJECT GRID */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: 40px auto 0;
+}
+
+/* PROJECT CARD */
+.project-card {
+  background: linear-gradient(145deg, #0f0f14, #08080c);
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid #1a1a22;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  border-color: #3b82f6;
+  box-shadow: 0 10px 40px rgba(59, 130, 246, 0.2);
+}
+
+/* LINKS */
+.project-links {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.project-links a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid #333;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.project-links a:hover {
+  background: #3b82f6;
+  border-color: #3b82f6;
+}

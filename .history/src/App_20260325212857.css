@@ -1,0 +1,163 @@
+/* BASE */
+body {
+  margin: 0;
+  background: #0b0b0f;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 10%;
+  min-height: 100vh;
+  gap: 60px;
+}
+
+/* LEFT */
+.hero-left {
+  max-width: 520px;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-left h2 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-left p {
+  margin-top: 20px;
+  color: #a1a1aa;
+  line-height: 1.6;
+}
+
+/* BUTTONS */
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.primary {
+  background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.primary:hover {
+  transform: translateY(-2px);
+}
+
+.secondary {
+  border: 1px solid #333;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #ccc;
+}
+
+.secondary:hover {
+  background: #111;
+}
+
+/* RIGHT SIDE */
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IMAGE CARD (NEW - looks premium) */
+.image-card {
+  padding: 10px;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #111, #1a1a1a);
+  box-shadow: 0 0 40px rgba(139, 92, 246, 0.15);
+}
+
+/* IMAGE */
+.image-card img {
+  width: 240px;
+  height: 320px;
+  object-fit: cover;
+  object-position: center 35%;
+  border-radius: 18px;
+  display: block;
+  transition: 0.3s;
+}
+
+.image-card img:hover {
+  transform: scale(1.05);
+}
+
+/* SECTIONS */
+.section {
+  min-height: 100vh;
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* PROJECTS */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.project-card {
+  background: #111;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #222;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: #333;
+}
+
+/* LINKS */
+.project-links {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.project-links a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid #333;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.project-links a:hover {
+  background: white;
+  color: black;
+}

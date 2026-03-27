@@ -1,0 +1,177 @@
+/* BASE */
+body {
+  margin: 0;
+  background: #0a0a0a;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 80px;
+  min-height: 100vh;
+  gap: 60px;
+}
+
+/* LEFT SIDE */
+.hero-left {
+  flex: 1;
+}
+
+.hero-left h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.name {
+  color: white;
+}
+
+.hero-left p {
+  margin-top: 20px;
+  color: #aaa;
+  max-width: 500px;
+  font-size: 1.05rem;
+}
+
+/* UNIQUE GRADIENT TEXT */
+.gradient-text {
+  background: linear-gradient(90deg, #7c3aed, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* RIGHT SIDE */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* SOFT GLOW BEHIND IMAGE */
+.hero-right::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.15), transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* IMAGE SIZE FIXED */
+.hero-right img {
+  width: 260px;
+  height: 340px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 20px;
+  border: 2px solid #333;
+  transition: all 0.3s ease;
+}
+
+/* IMAGE HOVER */
+.hero-right img:hover {
+  transform: scale(1.05);
+}
+
+/* BUTTONS */
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+/* PRIMARY BUTTON */
+.primary {
+  background: linear-gradient(90deg, #7c3aed, #22d3ee);
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.primary:hover {
+  transform: scale(1.05);
+}
+
+/* SECONDARY BUTTON */
+.secondary {
+  border: 1px solid #555;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.secondary:hover {
+  background: #1a1a1a;
+}
+
+/* SECTIONS */
+.section {
+  min-height: 100vh;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+/* SECTION TITLE */
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* PROJECT GRID */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* PROJECT CARD */
+.project-card {
+  background: #111;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #222;
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: #444;
+}
+
+/* PROJECT LINKS */
+.project-links {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.project-links a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid #333;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.project-links a:hover {
+  background: white;
+  color: black;
+}
