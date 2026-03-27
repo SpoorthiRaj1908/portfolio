@@ -1,3 +1,4 @@
+/* ================= BASE ================= */
 body {
   margin: 0;
   background: radial-gradient(circle at top, #04090a, #010203);
@@ -5,6 +6,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
+/* ================= HERO ================= */
 .hero {
   display: flex;
   align-items: center;
@@ -22,6 +24,7 @@ body {
   font-weight: 600;
 }
 
+/* 🔥 gradient text */
 .hero-role span {
   background: linear-gradient(90deg, #0f766e, #06b6d4);
   -webkit-background-clip: text;
@@ -33,6 +36,7 @@ body {
   color: #9ca3af;
 }
 
+/* ================= BUTTONS ================= */
 .buttons {
   margin-top: 30px;
   display: flex;
@@ -66,6 +70,7 @@ body {
   border-color: #06b6d4;
 }
 
+/* ================= IMAGE ================= */
 .image-card img {
   width: 250px;
   height: 330px;
@@ -74,6 +79,7 @@ body {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
 }
 
+/* ================= ABOUT ================= */
 .about {
   padding: 80px 10%;
 }
@@ -120,6 +126,7 @@ body {
   transform: translateY(-4px);
 }
 
+/* ================= PROJECTS ================= */
 .projects {
   padding: 80px 10%;
 }
@@ -189,6 +196,7 @@ body {
   border-color: transparent;
 }
 
+/* ================= CONTACT ================= */
 .contact {
   padding: 120px 10%;
   display: flex;
@@ -228,6 +236,7 @@ body {
   text-decoration: none;
 }
 
+/* ================= TYPING ================= */
 .typing {
   background: linear-gradient(90deg, #0f766e, #06b6d4);
   -webkit-background-clip: text;
