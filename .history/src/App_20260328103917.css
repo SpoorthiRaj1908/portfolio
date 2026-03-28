@@ -1,7 +1,7 @@
 /* ================= BASE ================= */
 body {
   margin: 0;
-  background: radial-gradient(circle at top, #0b0c15, #040406);
+  background: radial-gradient(circle at top, #0f0f1a, #050507);
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
@@ -23,11 +23,8 @@ body {
   font-size: 3.2rem;
 }
 
-/* 🔥 gradient accent */
 .hero-role span {
-  background: linear-gradient(90deg, #4f46e5, #22d3ee);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #f59e0b; /* 🔥 warm accent */
 }
 
 .description {
@@ -43,7 +40,7 @@ body {
 }
 
 .primary {
-  background: linear-gradient(90deg, #4f46e5, #22d3ee);
+  background: linear-gradient(90deg, #f59e0b, #f43f5e);
   padding: 12px 26px;
   border-radius: 30px;
   color: white;
@@ -53,7 +50,7 @@ body {
 
 .primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
+  box-shadow: 0 10px 25px rgba(245, 158, 11, 0.35);
 }
 
 .secondary {
@@ -74,62 +71,89 @@ body {
 
 /* ================= ABOUT ================= */
 .about {
-  padding: 70px 10%;
+  padding: 80px 10%;
 }
 
 .about-container {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 50px;
+  gap: 60px;
   align-items: center;
 }
 
 .about-image img {
-  max-width: 360px;
+  max-width: 380px;
   border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
 }
 
+/* 🔥 STATS */
 .about-stats {
   display: flex;
   gap: 60px;
-  margin: 25px 0;
+  margin: 30px 0;
 }
 
-/* 🔥 accent color */
 .about-stats h3 {
-  color: #22d3ee;
+  color: #f59e0b;
+  font-size: 1.6rem;
 }
 
+/* ================= SKILLS (🔥 MAIN UPGRADE) ================= */
 .about-skills {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
+  gap: 18px;
+  margin-top: 20px;
 }
 
-/* 🔥 ONLY CHANGE: premium shadow + hover */
+/* 🔥 PREMIUM CARD */
 .skill-box {
-  border: 1px solid #1f1f2a;
-  padding: 14px;
-  border-radius: 12px;
-
-  /* NEW: depth */
+  position: relative;
+  padding: 16px;
+  border-radius: 14px;
   background: rgba(255, 255, 255, 0.02);
-  box-shadow:
-    0 8px 25px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255,255,255,0.05);
 
-  transition: 0.3s ease;
+  /* depth */
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.5),
+    inset 0 0 0 1px rgba(255,255,255,0.02);
+
+  transition: 0.35s ease;
 }
 
+/* 🔥 glow border */
+.skill-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  padding: 1px;
+  background: linear-gradient(120deg, #f59e0b, #f43f5e, transparent);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+/* hover */
 .skill-box:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px) scale(1.02);
   box-shadow:
-    0 15px 40px rgba(0, 0, 0, 0.7),
-    0 0 12px rgba(34, 211, 238, 0.15); /* subtle glow */
+    0 20px 50px rgba(0,0,0,0.7),
+    0 0 20px rgba(245,158,11,0.15);
+}
+
+.skill-box:hover::before {
+  opacity: 1;
 }
 
 /* ================= PROJECTS ================= */
 .projects {
-  padding: 70px 10%;
+  padding: 80px 10%;
 }
 
 .section-title {
@@ -143,17 +167,43 @@ body {
   gap: 28px;
 }
 
+/* 🔥 PROJECT CARD UPGRADE */
 .project-card {
-  background: rgba(15, 15, 25, 0.85);
-  border: 1px solid #1f1f2a;
+  position: relative;
+  background: rgba(15, 15, 25, 0.9);
   border-radius: 18px;
   overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.05);
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  transition: 0.35s ease;
+}
+
+/* glow border */
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 1px;
+  background: linear-gradient(120deg, #f59e0b, #f43f5e, transparent);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  opacity: 0;
   transition: 0.3s;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 40px rgba(79, 70, 229, 0.25);
+  transform: translateY(-10px);
+  box-shadow:
+    0 30px 70px rgba(0,0,0,0.8),
+    0 0 25px rgba(244,63,94,0.2);
+}
+
+.project-card:hover::before {
+  opacity: 1;
 }
 
 .project-card img {
@@ -186,62 +236,38 @@ body {
 }
 
 .project-links a:hover {
-  background: linear-gradient(90deg, #4f46e5, #22d3ee);
+  background: linear-gradient(90deg, #f59e0b, #f43f5e);
   border-color: transparent;
 }
 
 /* ================= CONTACT ================= */
 .contact {
-  padding: 90px 10%;
+  padding: 100px 10%;
   display: flex;
   justify-content: center;
 }
 
 .contact-card {
   background: #0c0c14;
-  border: 1px solid #1f1f2a;
+  border: 1px solid rgba(255,255,255,0.05);
   border-radius: 20px;
   padding: 45px 40px;
   max-width: 520px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-}
 
-.contact-card h2 {
-  margin-bottom: 12px;
-  font-size: 1.8rem;
-}
-
-.contact-subtext {
-  color: #9ca3af;
-  margin-bottom: 25px;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.7);
 }
 
 .contact-email {
   display: inline-block;
-  background: linear-gradient(90deg, #4f46e5, #22d3ee);
+  background: linear-gradient(90deg, #f59e0b, #f43f5e);
   padding: 10px 22px;
   border-radius: 25px;
   color: white;
   text-decoration: none;
   margin-bottom: 20px;
-}
-
-.contact-links {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-}
-
-.contact-links a {
-  color: #cfcfd6;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-.contact-links a:hover {
-  color: #22d3ee;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -257,10 +283,5 @@ body {
 
   .projects-grid {
     grid-template-columns: 1fr;
-  }
-
-  .contact-links {
-    flex-direction: column;
-    gap: 10px;
   }
 }

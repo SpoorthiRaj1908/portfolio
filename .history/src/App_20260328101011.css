@@ -106,25 +106,10 @@ body {
   gap: 14px;
 }
 
-/* 🔥 ONLY CHANGE: premium shadow + hover */
 .skill-box {
   border: 1px solid #1f1f2a;
   padding: 14px;
   border-radius: 12px;
-
-  /* NEW: depth */
-  background: rgba(255, 255, 255, 0.02);
-  box-shadow:
-    0 8px 25px rgba(0, 0, 0, 0.5);
-
-  transition: 0.3s ease;
-}
-
-.skill-box:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    0 15px 40px rgba(0, 0, 0, 0.7),
-    0 0 12px rgba(34, 211, 238, 0.15); /* subtle glow */
 }
 
 /* ================= PROJECTS ================= */
@@ -218,6 +203,7 @@ body {
   margin-bottom: 25px;
 }
 
+/* 🔥 new gradient */
 .contact-email {
   display: inline-block;
   background: linear-gradient(90deg, #4f46e5, #22d3ee);

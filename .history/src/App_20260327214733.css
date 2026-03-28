@@ -1,0 +1,127 @@
+/* ================= CONTACT ================= */
+.contact {
+  padding: 100px 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #1f1f2a;
+  border-radius: 20px;
+  padding: 50px 40px;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(255, 255, 255, 0.03);
+
+  transition: 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  border-color: #6366f1; 
+}
+
+.contact-card h2 {
+  margin-bottom: 12px;
+  font-size: 1.8rem;
+}
+
+/* TEXT */
+.contact-subtext {
+  color: #9ca3af;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+.contact-email {
+  display: inline-block;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  padding: 12px 26px;
+  border-radius: 999px;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  margin-bottom: 20px;
+
+  transition: 0.3s;
+}
+
+.contact-email:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-links a {
+  text-decoration: none;
+  color: #cfcfd6;
+  font-size: 0.9rem;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* underline animation */
+.contact-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #8b5cf6;
+  transition: 0.3s;
+}
+
+.contact-links a:hover {
+  color: #8b5cf6;
+}
+
+.contact-links a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+
+  .contact {
+    padding: 80px 6%;
+  }
+
+  .contact-card {
+    padding: 35px 25px;
+  }
+
+  .contact-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-subtext {
+    font-size: 0.9rem;
+  }
+
+  .contact-email {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-card {
+    border-radius: 16px;
+    padding: 30px 20px;
+  }
+}
